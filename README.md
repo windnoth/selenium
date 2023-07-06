@@ -1,5 +1,5 @@
 # selenium
-안녕하세요, Game DevQA YCN입니다. 이 Git과 Project는 제 개인 공부 및 포트폴리오를 위해 만들어 진 공간입니다.
+안녕하세요, YCN, windnoth입니다. 이 Git과 Project는 제 개인 공부 및 포트폴리오를 위해 만들어 진 공간입니다.
 그 중 Selenium에서는 Web 환경의 자동화 공부 내용을 담습니다.
 
 아래는 각 폴더의 이름과 목표를 기재 합니다.
