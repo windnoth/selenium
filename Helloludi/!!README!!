@@ -8,3 +8,10 @@ test_mypage_connect
 
 test_otherpage_connect
 기타페이지에 연결 되는 모든 페이지를 불러 올 때 지정한 URL와 Status Code 200 여부를 비교합니다.
+
+
+Patch Note
+2023.07.10
+
+각 페이지에 Html-testrunner 모듈을 추가하고 결과값을 받을 수 있도록 코드를 추가 하였습니다.
+인자 값 - Open_in_browser = True
