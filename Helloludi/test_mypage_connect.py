@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import requests
+import HtmlTestRunner
 
 class mypage(unittest.TestCase):
 
@@ -13,8 +14,8 @@ class mypage(unittest.TestCase):
         
         global userid
         global userpw
-        userid = "@@@" #사용자 ID
-        userpw = "@@@" #사용자 PW
+        userid = "@@@" /사용자 ID
+        userpw = "@@@" /사용자 PW
 
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
@@ -39,7 +40,6 @@ class mypage(unittest.TestCase):
         self.driver.find_element(By.XPATH, '//*[@id="header_warp"]/div/div[2]/div[3]/ul/li[5]').click()
 
         self.driver.implicitly_wait(10)
-        time.sleep(1.5)
         
 #학습자 관리 URL 및 Response 200 확인
     def test_001_Index_Check_Url(self):
@@ -52,16 +52,9 @@ class mypage(unittest.TestCase):
         get_url = self.driver.current_url
         site1 = "https://www.helloludi.com/mypage/index.php"
 
-        print("2-001 학습자 관리 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
-
         response = requests.get(get_url)
-        print("2-001 Status code : " + str(response))    
 
-        try:
-            self.assertTrue(get_url == site1, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 학습자 관리 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-001)")
+        self.assertTrue(get_url == site1, response.status_code == 200)
 
 #학습자 리포트 및 학습 설정 URL 및  Response 200 확인
     def test_002_Report_Check_Url(self):
@@ -74,16 +67,9 @@ class mypage(unittest.TestCase):
         get_url = self.driver.current_url
         site2 = "https://www.helloludi.com/mypage/report.php"
 
-        print("2-002 학습자 리포트 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
-
         response = requests.get(get_url)
-        print("2-002 Status code : " + str(response))          
-
-        try:
-            self.assertTrue(get_url == site2, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 학습자 리포트 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-002)")
+ 
+        self.assertTrue(get_url == site2, response.status_code == 200)
 
 #쿠폰 관리 URL 및 Response 200 확인
     def test_003_Coupon_Check_Url(self):
@@ -96,16 +82,9 @@ class mypage(unittest.TestCase):
         get_url = self.driver.current_url
         site3 = "https://www.helloludi.com/mypage/coupon.php"
 
-        print("2-003 쿠폰 관리 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
-
         response = requests.get(get_url)
-        print("2-003 Status code : " + str(response))   
 
-        try:
-            self.assertTrue(get_url == site3, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 쿠폰 관리 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-003)")
+        self.assertTrue(get_url == site3, response.status_code == 200)
 
 #구매하기 URL 및 Response 200 확인
     def test_004_Goodslist_Check_Url(self):
@@ -113,21 +92,14 @@ class mypage(unittest.TestCase):
         self.driver.find_element(By.XPATH, '//*[@id="wrap"]/div[3]/div/div[1]/div/div[1]/div[1]/ul/li[2]/ul/li[1]/a').click()
 
         self.driver.implicitly_wait(10)
-        time.sleep(1.5)
+        time.sleep(1)
 
         get_url = self.driver.current_url
         site4 = "https://www.helloludi.com/goods/goods_list.php?cateCd=004001"
 
-        print("2-004 쿠폰 관리 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
-
         response = requests.get(get_url)
-        print("2-004 Status code : " + str(response))   
 
-        try:
-            self.assertTrue(get_url == site4, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 쿠폰 관리 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-004)")
+        self.assertTrue(get_url == site4, response.status_code == 200)
 
 #장바구니 URL 및 Response 200 확인
     def test_005_Cart_Check_Url(self):
@@ -135,21 +107,14 @@ class mypage(unittest.TestCase):
         self.driver.find_element(By.XPATH, '//*[@id="wrap"]/div[3]/div/div[1]/div/div[1]/div[1]/ul/li[2]/ul/li[2]/a').click()
 
         self.driver.implicitly_wait(10)
-        time.sleep(1.5)
+        time.sleep(1)
 
         get_url = self.driver.current_url
         site5 = "https://www.helloludi.com/order/cart.php"
 
-        print("2-005 장바구니 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
-
         response = requests.get(get_url)
-        print("2-005 Status code : " + str(response))   
 
-        try:
-            self.assertTrue(get_url == site5, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 장바구니 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-005)")
+        self.assertTrue(get_url == site5, response.status_code == 200)
 
 #주문목록/배송조회 URL 및 Response 200 확인
     def test_006_Orderlist_Check_Url(self):
@@ -157,21 +122,14 @@ class mypage(unittest.TestCase):
         self.driver.find_element(By.XPATH, '//*[@id="wrap"]/div[3]/div/div[1]/div/div[1]/div[1]/ul/li[2]/ul/li[3]/a').click()
 
         self.driver.implicitly_wait(10)
-        time.sleep(1.5)
+        time.sleep(1)
 
         get_url = self.driver.current_url
         site6 = "https://www.helloludi.com/mypage/order_list.php"
 
-        print("2-006 주문목록/배송조회 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
-
         response = requests.get(get_url)
-        print("2-006 Status code : " + str(response))           
 
-        try:
-            self.assertTrue(get_url == site6, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 주문목록/배송조회 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-006)")
+        self.assertTrue(get_url == site6, response.status_code == 200)
 
 #취소/반품/교환 내역 URL 및 Response 200 확인
     def test_007_Cancellist_Check_Url(self):
@@ -179,21 +137,14 @@ class mypage(unittest.TestCase):
         self.driver.find_element(By.XPATH, '//*[@id="wrap"]/div[3]/div/div[1]/div/div[1]/div[1]/ul/li[2]/ul/li[4]/a').click()
 
         self.driver.implicitly_wait(10)
-        time.sleep(1.5)
+        time.sleep(1)
 
         get_url = self.driver.current_url
         site7 = "https://www.helloludi.com/mypage/cancel_list.php"
         
-        print("2-007 주문목록/배송조회 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
-
         response = requests.get(get_url)
-        print("2-007 Status code : " + str(response))           
-
-        try:
-            self.assertTrue(get_url == site7, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 취소/반품/교환 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-007)")
+   
+        self.assertTrue(get_url == site7, response.status_code == 200)
 
 #환불/입금 내역 URL 및 Response 200 확인
     def test_008_Refundlist_Check_Url(self):
@@ -201,21 +152,14 @@ class mypage(unittest.TestCase):
         self.driver.find_element(By.XPATH, '//*[@id="wrap"]/div[3]/div/div[1]/div/div[1]/div[1]/ul/li[2]/ul/li[5]/a').click()
 
         self.driver.implicitly_wait(10)
-        time.sleep(1.5)
+        time.sleep(1)
  
         get_url = self.driver.current_url
         site8 = "https://www.helloludi.com/mypage/refund_list.php"
 
-        print("2-008 환불/입금 내역 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
-
         response = requests.get(get_url)
-        print("2-008 Status code : " + str(response))   
 
-        try:
-            self.assertTrue(get_url == site8, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 환불/입금 내역 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-008)")
+        self.assertTrue(get_url == site8, response.status_code == 200)
 
 #배송지 관리 URL 및 Response 200 확인
     def test_009_Shipping_Check_Url(self):
@@ -228,61 +172,45 @@ class mypage(unittest.TestCase):
         get_url = self.driver.current_url
         site9 = "https://www.helloludi.com/mypage/shipping.php"
 
-        print("2-009 배송지 관리 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
-
         response = requests.get(get_url)
-        print("2-009 Status code : " + str(response))  
 
-        try:
-            self.assertTrue(get_url == site9, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 배송지 관리 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-009)")
+        self.assertTrue(get_url == site9, response.status_code == 200)
 
 #회원정보 변경 URL 및 Response 200 확인
     def test_010_Shipping_Check_Url(self):
-        
-        time.sleep(0.8)
 
         self.driver.find_element(By.XPATH, '//*[@id="wrap"]/div[3]/div/div[1]/div/div[1]/div[1]/ul/li[4]/ul/li/a').click()
 
         self.driver.implicitly_wait(10)
-        time.sleep(1.5)
+        time.sleep(1)
 
         #카카오 인증 페이지
         get_url1 = self.driver.current_url
         site10 = "https://www.helloludi.com/mypage/my_page_password.php"
 
-        print("회원 정보 변경 클릭으로 지정한 카카오 인증 유도 URL 이동 확인, Status Code 200 비교 중..")
-
-        self.driver.implicitly_wait(10)
-
         response1 = requests.get(get_url1)
-        print("2-010_1 Status code : " + str(response1))          
         
-        time.sleep(0.5)
+        self.driver.implicitly_wait(10)
 
         if (get_url1 == site10) & (response1.status_code == 200):
             
             self.driver.find_element(By.XPATH, '//*[@id="wrap"]/div[3]/div/div/div/div[2]/div/div/div[3]/button/em').click()
             
             #새로운 창 핸들링
-            print("카카오 로그인 프로세스 진행 중..")
             self.driver.switch_to.window(self.driver.window_handles[1])
                         
             get_url2 = self.driver.current_url
             response2 = requests.get(get_url2)
-            print("2-010_2 Status code : " + str(response2)) 
 
             self.driver.implicitly_wait(10)
 
             textbox_id2 = self.driver.find_element(By.XPATH, '//*[@id="loginKey--1"]')
             textbox_id2.click()
-            textbox_id2.send_keys("@@@@") #카카오톡 ID
+            textbox_id2.send_keys("@@@") /카카오톡 ID
 
             textbox_pw2 = self.driver.find_element(By.XPATH, '//*[@id="password--2"]')
             textbox_pw2.click()
-            textbox_pw2.send_keys("@@@@") #카카오톡PW
+            textbox_pw2.send_keys("@@@") /카카오톡 PW
 
             login_btn2 = self.driver.find_element(By.XPATH, '//*[@id="mainContent"]/div/div/form/div[4]/button[1]')
             login_btn2.click()
@@ -294,30 +222,20 @@ class mypage(unittest.TestCase):
 
             if response2.status_code == 200:
 
-                print("카카오 로그인 완료..")
-
-                time.sleep(0.5)
                 get_url3 = self.driver.current_url
-                site11 = "https://www.helloludi.com/mypage/my_page.php"
-
+                site10 = "https://www.helloludi.com/mypage/my_page.php"
+                
                 response3 = requests.get(get_url3)
-                print("2-010_3 Status code : " + str(response3)) 
                 
                 self.driver.implicitly_wait(10)
 
-
+                self.assertTure(get_url3 == site10, response3.status_code == 200)
+            
             else:
                 print("카카오 로그인 프로세스 실패(Fail)2-010_2")
-
+       
         else:
             print("마이페이지에서 회원정보 변경 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail)2-010_1")
-
-
-        try:
-            self.assertTrue(get_url3 == site11 , response3.status_code == 200)
-
-        except:
-            print("회원정보 변경 페이지의 주소와 실제 주소가 다르거나 Status Code가 200이 아님(Fail)2-010_3")
 
 #1:1 문의 URL 및 Response 200 확인
     def test_011_Mypageqa_Check_Url(self):
@@ -325,43 +243,30 @@ class mypage(unittest.TestCase):
         self.driver.find_element(By.XPATH, '//*[@id="wrap"]/div[3]/div/div/div/div[1]/div[1]/ul/li[5]/ul/li[1]/a').click()
 
         self.driver.implicitly_wait(10)     
-        time.sleep(1.5)
+        time.sleep(1)
 
         get_url = self.driver.current_url
-        site12 = "https://www.helloludi.com/board/list.php?bdId=qa&memNo=194&mypageFl=y&target=_parent&nocategory=y"
-
-        print("2-011 1:1 문의 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
+        site11 = "https://www.helloludi.com/board/list.php?bdId=qa&memNo=194&mypageFl=y&target=_parent&nocategory=y"
 
         response = requests.get(get_url)
-        print("2-011 Status code : " + str(response))  
 
-        try:
-            self.assertTrue(get_url == site12, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 1:1 문의 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-011)")
+        self.assertTrue (get_url == site11, response.status_code == 200)
+
 
 #상품 문의 URL 및 Response 200 확인
     def test_012_Mypagegoods_Check_Url(self):
         
         self.driver.find_element(By.XPATH, '//*[@id="wrap"]/div[3]/div/div/div/div[1]/div[1]/ul/li[5]/ul/li[2]/a').click()
-        
         self.driver.implicitly_wait(10)        
         time.sleep(1)
 
         get_url = self.driver.current_url
-        site13 = "https://www.helloludi.com/board/list.php?bdId=goodsqa&memNo=194&mypageFl=y&target=_parent&nocategory=y"
-
-        print("2-012 상품 문의 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
+        site12 = "https://www.helloludi.com/board/list.php?bdId=goodsqa&memNo=194&mypageFl=y&target=_parent&nocategory=y"
 
         response = requests.get(get_url)
-        print("2-012 Status code : " + str(response))  
 
-        try:
-            self.assertTrue(get_url == site13, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 1:1 문의 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-012)")  
+        self.assertTrue (get_url == site12, response.status_code == 200)
+
 
 #상품 후기 URL 및 Response 200 확인
     def test_013_Mypagegoodsreview_Check_Url(self):
@@ -372,26 +277,18 @@ class mypage(unittest.TestCase):
         time.sleep(1)
 
         get_url = self.driver.current_url
-        site14 = "https://www.helloludi.com/board/list.php?bdId=goodsreview&memNo=194&mypageFl=y&target=_parent&nocategory=y"
-
-        print("2-013 상품 문의 클릭으로 지정한 URL 이동 확인 및 Status Code 200 비교 중..")
+        site13 = "https://www.helloludi.com/board/list.php?bdId=goodsreview&memNo=194&mypageFl=y&target=_parent&nocategory=y"
 
         response = requests.get(get_url)
-        print("2-013 Status code : " + str(response))  
 
-        try:
-            self.assertTrue(get_url == site14, response.status_code == 200)
-        
-        except:
-            print("마이페이지에서 상품 문의 클릭 시 지정한 URL 혹은 Status Code가 200이 아님(Fail, 2-013)")  
-   
+        self.assertTrue(get_url == site13, response.status_code == 200)
+  
 
     def tearDown(self):
-        self.driver.implicitly_wait(10)
-        #self.driver.quit()
+        self.driver.quit()
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(open_in_browser=True))
 
 ##슈트 전용
 # def suite():
