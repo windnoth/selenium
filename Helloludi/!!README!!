@@ -13,5 +13,7 @@ test_otherpage_connect
 Patch Note
 2023.07.10
 
-각 페이지에 Html-testrunner 모듈을 추가하고 결과값을 받을 수 있도록 코드를 추가 하였습니다.
-인자 값 - Open_in_browser = True
+1. 각 페이지에 Html-testrunner 모듈을 추가하고 결과값을 받을 수 있도록 코드를 추가 하였습니다.
+    - 인자 값 - Open_in_browser = True
+
+2. Html-testrunner 모듈이 추가 됨에 따라 더 이상 String 호출을 할 필요가 없어져 모두 제거 하였습니다.
