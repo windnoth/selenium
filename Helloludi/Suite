@@ -1,0 +1,19 @@
+import unittest
+from selenium import webdriver
+from selenium.webdriver.chrome import service
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
+import time
+import requests
+import test_main_connect
+import test_mypage_connect
+import test_otherpage_connect
+import HtmlTestRunner
+
+testcase1 = unittest.TestLoader().loadTestsFromTestCase(test_main_connect.mainpage)
+testcase2 = unittest.TestLoader().loadTestsFromTestCase(test_mypage_connect.mypage)
+testcase3 = unittest.TestLoader().loadTestsFromTestCase(test_otherpage_connect.otherpage)
+
+testsuite = unittest.TestSuite([testcase1, testcase2, testcase3])
+
+HtmlTestRunner.HTMLTestRunner(combine_reports=True, open_in_browser=True).run(testsuite)
