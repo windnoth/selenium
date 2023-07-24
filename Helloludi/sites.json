@@ -58,3 +58,112 @@
         "site" : "https://www.helloludi.com/goods/goods_view.php?goodsNo=1000000002",
         "disc" : "루디패스 30입니다."
     },
+
+    "My001_site" :
+    {
+        "site" : "https://www.helloludi.com/mypage/index.php",
+        "disc" : "마이페이지입니다."
+    },
+
+    "My002_site" :
+    {
+        "site" : "https://www.helloludi.com/mypage/report.php",
+        "disc" : "학습자 리포트 및 학습 설정입니다."
+    },
+
+    "My003_site" :
+    {
+        "site" : "https://www.helloludi.com/mypage/coupon.php",
+        "disc" : "쿠폰 관리입니다."
+    },
+    "My004_site" :
+    {
+        "site" : "https://www.helloludi.com/goods/goods_list.php?cateCd=004001",
+        "disc" : "구매하기입니다."
+    },
+    "My005_site" :
+    {
+        "site" : "https://www.helloludi.com/order/cart.php",
+        "disc" : "장바구니입니다."
+    },
+
+    "My006_site" :
+    {
+        "site" : "https://www.helloludi.com/mypage/order_list.php",
+        "disc" : "주문목록/배송조회입니다."
+    },
+    
+    "My007_site" :
+    {
+        "site" : "https://www.helloludi.com/mypage/cancel_list.php",
+        "disc" : "취소/반품/교환 내역입니다."
+    },
+
+    "My008_site" :
+    {
+        "site" : "https://www.helloludi.com/mypage/refund_list.php",
+        "disc" : "환불/입금 내역입니다."
+    },
+
+    "My009_site" :
+    {
+        "site" : "https://www.helloludi.com/mypage/shipping.php",
+        "disc" : "배송지 관리입니다."
+    },
+
+    "My010_site" :
+    {
+        "site" : "https://www.helloludi.com/mypage/my_page_password.php",
+        "disc" : "회원정보 가기전 패스워드 재입력입니다."
+    },
+
+    "My010_1_site" :
+    {
+        "site" : "https://www.helloludi.com/mypage/my_page.php",
+        "disc" : "회원정보 변경입니다."
+    },
+    
+    "My011_site" :
+    {
+        "site" : "https://www.helloludi.com/board/list.php?bdId=qa&memNo=194&mypageFl=y&target=_parent&nocategory=y",
+        "disc" : "1:1 문의입니다."
+    },
+
+    "My012_site" :
+    {
+        "site" : "https://www.helloludi.com/board/list.php?bdId=goodsqa&memNo=194&mypageFl=y&target=_parent&nocategory=y",
+        "disc" : "상품 문의입니다."
+    },
+    
+    "My013_site" :
+    {
+        "site" : "https://www.helloludi.com/board/list.php?bdId=goodsreview&memNo=194&mypageFl=y&target=_parent&nocategory=y",
+        "disc" : "상품 후기입니다."
+    },
+
+    "Other001_site" :
+    {
+        "site" : "https://www.helloludi.com/board/view.php?&bdId=notice&sno=15",
+        "disc" : "3일 무료 체험 자세히 보기입니다."
+    },
+
+    "Other002_site" :
+    {
+        "site" : "https://pf.kakao.com/_xcAqxms",
+        "disc" : "플로팅 - 1:1 문의하기입니다."
+    },
+
+    "Other003_site" :
+    {
+        "site" : "https://play.google.com/store/apps/details?id=com.archipin.helloludi",
+        "disc" : "플레이스토어 페이지입니다."
+
+    },
+
+    "Other004_site" :
+    {
+        "site" : "https://apps.apple.com/kr/app/%ED%97%AC%EB%A1%9C%EB%A3%A8%EB%94%94/id1662411884",
+        "disc" : "앱스토어 페이지입니다."
+    }
+
+}
