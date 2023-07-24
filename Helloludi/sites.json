@@ -1,0 +1,60 @@
+{
+    "Main001_site" : 
+    {
+        "site" : "https://www.helloludi.com/",
+        "disc" : "헬로루디 메인 페이지입니다."
+    },
+
+    "Main002_site" : 
+    {
+        "site" : "https://www.helloludi.com/main/index.php",
+        "disc" : "헬로루디 메인 페이지(인덱스)입니다."
+    },
+
+    "Main003_site" : 
+    {
+        "site" : "https://www.helloludi.com/main/curriculum.php",
+        "disc" : "커리큘럼입니다."
+    },
+
+    "Main004_site" : 
+    {
+        "site" : "https://www.helloludi.com/board/list.php?bdId=confirmedreview",
+        "disc" : "학습 후기입니다."
+    },
+
+    "Main005_site" : 
+    {
+        "site" : "https://www.helloludi.com/board/list.php?bdId=confirmedreview",
+        "disc" : "루디보드입니다."
+    },
+
+    "Main006_site" : 
+    {
+        "site" : "https://www.helloludi.com/mypage/index.php",
+        "disc" : "마이페이지입니다."
+    },
+
+    "Main007_site" : 
+    {
+        "site" : "https://www.helloludi.com/goods/goods_list.php?cateCd=004001",
+        "disc" : "굿즈 목록입니다."
+    },
+
+    "Main008_site" : 
+    {
+        "site" : "https://www.helloludi.com/goods/goods_view.php?goodsNo=1000000000",
+        "disc" : "루디패스 365입니다."
+    },
+
+    "Main009_site" : 
+    {
+        "site" : "https://www.helloludi.com/goods/goods_view.php?goodsNo=1000000010",
+        "disc" : "루디패스 300입니다."
+    },
+
+    "Main010_site" : 
+    {
+        "site" : "https://www.helloludi.com/goods/goods_view.php?goodsNo=1000000002",
+        "disc" : "루디패스 30입니다."
+    },
