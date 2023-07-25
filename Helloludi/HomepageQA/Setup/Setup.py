@@ -1,3 +1,4 @@
+#테스트 관련 모듈 : 유닛테스트, 웹 드라이버
 import unittest
 from selenium import webdriver
 
