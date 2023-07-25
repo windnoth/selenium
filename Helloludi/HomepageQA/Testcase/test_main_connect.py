@@ -1,25 +1,22 @@
+#테스트 관련 모듈 : 유닛테스트, 대기, Status_code, Html 결과 보고서
 import unittest
-from selenium import webdriver
-from selenium.webdriver.chrome import service
-from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
 import time
 import requests
 import HtmlTestRunner
 
+#필요 모듈 : setUp(+tearDown), Pagefactory(Locator), Config
 import sys
-sys.path.append('HomepageQA/Setup')
-sys.path.append('HomepageQA/Pagefactory')
-sys.path.append('HomepageQA/Config')
+sys.path.append('Setup')
+sys.path.append('Pagefactory')
+sys.path.append('Config')
 
 from Setup import setUp
-from Locator import Mainpage_locators
+from Locator import page_locators
 from Config_class import Mainsites
 from Config_class import Config
 
-class mainpage(setUp,Mainpage_locators,Mainsites,Config):
-# 크롬, 최대화, 접속
-
+#메인페이지에 대한 URL 및 Status code 비교 Testcase
+class mainpage(setUp,page_locators,Mainsites,Config):
            
 # 메인 페이지에서 로고 클릭 시 URL 이동 및 확인, Status Code 200 비교
     def test_001_Mainpage_Check_Url(self):
@@ -144,17 +141,3 @@ class mainpage(setUp,Mainpage_locators,Mainsites,Config):
 
 if __name__ == "__main__":
     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(open_in_browser=True))
-
-
-
-# #슈트 전용
-# def suite():
-#     suite = unittest.TestSuite()
-#     suite.addTest(mainpage('test_010_Goods_Pass30_Check_Url'))
-    
-#     return suite
-
-# #슈트 전용
-# if __name__ == "__main__":
-#     runner = unittest.TextTestRunner()
-#     runner.run(suite())
