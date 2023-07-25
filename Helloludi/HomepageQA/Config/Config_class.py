@@ -1,10 +1,10 @@
-class Config():
+class Config(): #계정 정보
     Helloludi_id = ""
     Helloludi_pw = ""
     kakao_id = ""
     kakao_pw = ""
 
-class Mainsites():
+class Mainsites(): #Testcase - test_main_connect.py에서 사용하는 주소
     Main001_site = "https://www.helloludi.com/"
     Main002_site = "https://www.helloludi.com/main/index.php"
     Main003_site = "https://www.helloludi.com/main/curriculum.php"
@@ -16,7 +16,7 @@ class Mainsites():
     Main009_site = "https://www.helloludi.com/goods/goods_view.php?goodsNo=1000000010"
     Main010_site = "https://www.helloludi.com/goods/goods_view.php?goodsNo=1000000002"
 
-class Mysites():
+class Mysites(): #Testcase - test_mypage_connect.py에서 사용하는 주소
     My001_site = "https://www.helloludi.com/mypage/index.php"
     My002_site = "https://www.helloludi.com/mypage/report.php"
     My003_site = "https://www.helloludi.com/mypage/coupon.php"
@@ -32,7 +32,7 @@ class Mysites():
     My012_site = "https://www.helloludi.com/board/list.php?bdId=goodsqa&memNo=194&mypageFl=y&target=_parent&nocategory=y"
     My013_site = "https://www.helloludi.com/board/list.php?bdId=goodsreview&memNo=194&mypageFl=y&target=_parent&nocategory=y"
 
-class Othersites():
+class Othersites(): #Testcase - test_otherpage_connect.py에서 사용하는 주소
     Other001_site = "https://www.helloludi.com/board/view.php?&bdId=notice&sno=15"
     Other002_site = "https://pf.kakao.com/_xcAqxms"
     Other003_site = "https://play.google.com/store/apps/details?id=com.archipin.helloludi"
