@@ -2,8 +2,7 @@
  ┣ 📂Config
  ┃ ┗ 📜Config_class.py
  ┣ 📂Pagefactory
- ┃ ┃ ┣ 📜Locator.py
- ┃ ┗ 📜Pagefactory.py
+ ┃ ┗ 📜Locator.py
  ┣ 📂Setup
  ┃ ┗ 📜Setup.py
  ┣ 📂Testcase
@@ -11,6 +10,10 @@
  ┃ ┣ 📜test_mypage_connect.py
  ┃ ┗ 📜test_otherpage_connect.py
  ┗ 📂Testsuite
-   ┗ 📜thomepageQA_suite.py
+   ┗ 📜HomepageQA_suite.py
 
-트리는 위와 같이 구성 될 예정입니다.(변동 가능)
+Config    - 사용자가 직접 관리하는 항목이 포함 되어 있습니다.
+Locator   - Pagefactory Module의 기능이 포함 됩니다. POM을 위해 도입하였습니다.(Element와 Pagefactory가 포함 되어 있습니다.)
+Setup     - setUp과 tearDown이 포함 되어 있습니다.
+Testcase  - 테스트케이스 각 항목이 포함 되어 있습니다.
+Testsuite - 테스트케이스의 묶음으로 한번에 항목들을 진행 시킬 수 있습니다.
