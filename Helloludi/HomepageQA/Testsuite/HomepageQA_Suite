@@ -1,0 +1,21 @@
+#테스트 관련 모듈 : 유닛테스트, Html 결과 보고서
+import unittest
+import HtmlTestRunner
+
+#필요 모듈 : Testcase
+import sys
+sys.path.append('Testcase')
+
+from test_main_connect import Mainpage
+from test_mypage_connect import Mypage
+from test_otherpage_connect import Otherpage
+
+
+
+testcase1 = unittest.TestLoader().loadTestsFromTestCase(Mainpage)
+testcase2 = unittest.TestLoader().loadTestsFromTestCase(Mypage)
+testcase3 = unittest.TestLoader().loadTestsFromTestCase(Otherpage)
+
+testsuite = unittest.TestSuite([testcase1, testcase2, testcase3])
+
+HtmlTestRunner.HTMLTestRunner(combine_reports=True, open_in_browser=True).run(testsuite)
