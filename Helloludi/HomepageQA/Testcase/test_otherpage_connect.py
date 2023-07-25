@@ -88,15 +88,3 @@ class otherpage(setUp,page_locators,Othersites,Config):
 
 if __name__ == "__main__":
     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(open_in_browser=True))
-
-##슈트 전용
-# def suite():
-#     suite = unittest.TestSuite()
-#     suite.addTest(mainpage('test_010_Goods_Pass30_Check_Url'))
-    
-#     return suite
-
-##슈트 전용
-# if __name__ == "__main__":
-#     runner = unittest.TextTestRunner()
-#     runner.run(suite())
