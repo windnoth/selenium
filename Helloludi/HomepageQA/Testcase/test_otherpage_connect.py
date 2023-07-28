@@ -16,7 +16,7 @@ from Config_class import Config
 
 
 
-class otherpage(setUp,page_locators,Othersites,Config):
+class Otherpage(setUp,page_locators,Othersites,Config):
     
 # 메인페이지 3일 무료 체험 바로 시작하기 // 현재 작동 안함
 
