@@ -16,7 +16,7 @@ from Config_class import Mainsites
 from Config_class import Config
 
 #메인페이지에 대한 URL 및 Status code 비교 Testcase
-class mainpage(setUp,page_locators,Mainsites,Config):
+class Mainpage(setUp,page_locators,Mainsites,Config):
            
 # 메인 페이지에서 로고 클릭 시 URL 이동 및 확인, Status Code 200 비교
     def test_001_Mainpage_Check_Url(self):
